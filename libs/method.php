@@ -111,7 +111,7 @@ class Method {
                     continue 2;
                 }
             }
-            return new Error(9, "", "Your Have No Permission to use thei method!");
+            return new Error(9, "", "Your Have No Permission to use this method!");
         }
     }
 

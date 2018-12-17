@@ -13,7 +13,7 @@ class Response {
         if (!is_array($output) && get_class($output) == "Error") {
             $return = json_encode(array('Error' => array('errorCode' => $output->getErrorCode(), 'method' => $output->getMethod(), 'message' => $output->getMessage())));
         } else {
-            $return = json_encode(array($this->main->request->getMethodName(false) => $output));
+            $return = json_encode(array('Successful' => $output));
         }
         if (isset($_GET['jsonp'])) {
             $return = $_GET['jsonp']."(".$return.")";
